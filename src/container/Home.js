@@ -30,7 +30,6 @@ function Home() {
             { name: 'Sergey Brin', email: 'sergey@google.com' },
             { name: 'Eric Schmidt', email: 'eric@google.com' },
         ]);
-        console.log(moreRows)
     }
 
     useEffect(() => {
