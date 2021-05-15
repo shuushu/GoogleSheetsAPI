@@ -6,6 +6,7 @@
 /.pnp
 .pnp.js
 src/token.json
+src/fbtoken.json
 # testing
 /coverage
 

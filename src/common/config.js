@@ -1,10 +1,3 @@
-export const fbConfig = {
-    apiKey: "AIzaSyBwc5tkZM3fEQcyPC1-HfguTbIt8woO9iA",
-    authDomain: "shushu-cb26c.firebaseapp.com",
-    databaseURL: "https://shushu-cb26c.firebaseio.com",
-    storageBucket: "shushu-cb26c.appspot.com"
-};
-
 // 상태값
 const TYPE = [
     'INIT',

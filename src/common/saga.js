@@ -3,7 +3,7 @@ import { call, put, takeEvery, takeLatest } from 'redux-saga/effects'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
-import { fbConfig } from '../common/config'
+import fbConfig from '../fbtoken.json'
 firebase.initializeApp(fbConfig);
 
 
@@ -53,7 +53,7 @@ function* logout() {
         return new Promise(resolve => {
             firebase.auth().signOut().then(() => {
                 resolve(true)
-            }).catch( error => {
+            }).catch(error => {
                 resolve(false)
             });
         })
@@ -76,7 +76,7 @@ function* mySaga() {
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     let { uid, displayName, email, photoURL } = user;
-                    resolve({ uid, displayName, email, photoURL } )
+                    resolve({ uid, displayName, email, photoURL })
                 } else {
                     // User is signed out.
                     resolve(false)
